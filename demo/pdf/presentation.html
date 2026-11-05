@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<title>Force Taxi 69 — Présentation</title>
+<style>
+  @page { size: 297mm 210mm; margin: 0; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #102538;
+  }
+  h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; margin: 0; }
+
+  .page {
+    width: 297mm;
+    height: 210mm;
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+  }
+  .page:last-child { page-break-after: auto; }
+
+  /* --- Page de garde --- */
+  .cover {
+    background: linear-gradient(135deg, #102538 0%, #1b3b5f 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-align: center;
+  }
+  .cover .badge {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 22px 34px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+    margin-bottom: 44px;
+  }
+  .cover .badge img { height: 70px; display: block; }
+  .cover .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-size: 12px;
+    color: #d9b84a;
+    font-weight: bold;
+    margin-bottom: 18px;
+  }
+  .cover h1 {
+    font-size: 46px;
+    font-weight: 700;
+    max-width: 820px;
+    line-height: 1.25;
+  }
+  .cover .subtitle {
+    margin-top: 20px;
+    font-size: 19px;
+    color: #eef1f4;
+  }
+  .cover .domain {
+    margin-top: 50px;
+    font-size: 14px;
+    letter-spacing: 0.08em;
+    color: #c9a227;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 20px;
+  }
+
+  /* --- Pages section --- */
+  .topbar {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: #102538;
+    color: #ffffff;
+    padding: 14px 28px;
+  }
+  .topbar img { height: 28px; }
+  .topbar .name { font-weight: bold; font-size: 15px; letter-spacing: 0.04em; }
+  .topbar .page-label {
+    margin-left: auto;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #c9a227;
+  }
+
+  .section-body {
+    display: flex;
+    height: calc(210mm - 57px);
+  }
+  .section-text {
+    width: 30%;
+    padding: 34px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .section-text .kicker {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #a9830f;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .section-text h2 {
+    font-size: 27px;
+    color: #102538;
+    line-height: 1.2;
+  }
+  .section-text .rule {
+    width: 46px;
+    height: 3px;
+    background: #c9a227;
+    margin: 16px 0 16px;
+  }
+  .section-text p {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: #45545f;
+    margin: 0;
+  }
+  .section-shot {
+    width: 70%;
+    background: #f6f8fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 28px 24px 0;
+  }
+  .section-shot .frame {
+    width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 14px 38px rgba(16,37,56,0.18);
+    border: 1px solid #d6dce2;
+    background: #fff;
+  }
+  .section-shot img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  /* --- Page finale --- */
+  .final {
+    background: #102538;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 80px;
+  }
+  .final .kicker {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: #c9a227;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  .final h2 {
+    font-size: 36px;
+    margin-bottom: 36px;
+  }
+  .steps { display: flex; flex-direction: column; gap: 22px; max-width: 720px; }
+  .step {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+  }
+  .step .num {
+    flex-shrink: 0;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 2px solid #c9a227;
+    color: #c9a227;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 15px;
+  }
+  .step .txt h3 {
+    font-size: 16px;
+    margin-bottom: 4px;
+    color: #ffffff;
+  }
+  .step .txt p {
+    font-size: 13px;
+    color: #cfd8e0;
+    margin: 0;
+    line-height: 1.5;
+  }
+  .final .footer-note {
+    margin-top: 48px;
+    font-size: 12px;
+    color: #8da0b3;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    padding-top: 18px;
+  }
+</style>
+</head>
+<body>
+
+  <!-- Page de garde -->
+  <section class="page cover">
+    <div class="eyebrow">Syndicat de taxis · Lyon · FNDT</div>
+    <div class="badge"><img src="LOGO_SRC" alt="Force Taxi 69" /></div>
+    <h1>Force Taxi 69 — Nouveau site officiel</h1>
+    <div class="subtitle">forcetaxi69.com — présentation pour validation</div>
+    <div class="domain">FORCETAXI69.COM</div>
+  </section>
+
+  <!-- Accueil -->
+  <section class="page">
+    <div class="topbar"><img src="LOGO_SRC" alt="" /><span class="name">FORCE TAXI 69</span><span class="page-label">Accueil</span></div>
+    <div class="section-body">
+      <div class="section-text">
+        <div class="kicker">01 — Accueil</div>
+        <h2>Premier contact</h2>
+        <div class="rule"></div>
+        <p>La page d'accueil affiche immédiatement l'identité du syndicat et son affiliation à la FNDT, avec un message clair — « La force du collectif » — et un bouton d'adhésion visible dès l'arrivée sur le site.</p>
+      </div>
+      <div class="section-shot">
+        <div class="frame"><img src="SHOT_TOP" alt="Accueil" /></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Le syndicat -->
+  <section class="page">
+    <div class="topbar"><img src="LOGO_SRC" alt="" /><span class="name">FORCE TAXI 69</span><span class="page-label">Le syndicat</span></div>
+    <div class="section-body">
+      <div class="section-text">
+        <div class="kicker">02 — Le syndicat</div>
+        <h2>Notre mission</h2>
+        <div class="rule"></div>
+        <p>Cette section rappelle les engagements de Force Taxi 69 : défense des droits des chauffeurs, conditions de travail équitables et lutte contre la concurrence déloyale, au sein de la FNDT.</p>
+      </div>
+      <div class="section-shot">
+        <div class="frame"><img src="SHOT_SYNDICAT" alt="Le syndicat" /></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vos avantages -->
+  <section class="page">
+    <div class="topbar"><img src="LOGO_SRC" alt="" /><span class="name">FORCE TAXI 69</span><span class="page-label">Vos avantages</span></div>
+    <div class="section-body">
+      <div class="section-text">
+        <div class="kicker">03 — Vos avantages</div>
+        <h2>Des avantages concrets</h2>
+        <div class="rule"></div>
+        <p>Onze avantages négociés pour les adhérents sont présentés sous forme de grille claire : assurances, logiciels métier, contrôle technique, recyclage, médiation consommation et accompagnement contraventions.</p>
+      </div>
+      <div class="section-shot">
+        <div class="frame"><img src="SHOT_AVANTAGES" alt="Vos avantages" /></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Adhésion -->
+  <section class="page">
+    <div class="topbar"><img src="LOGO_SRC" alt="" /><span class="name">FORCE TAXI 69</span><span class="page-label">Adhésion</span></div>
+    <div class="section-body">
+      <div class="section-text">
+        <div class="kicker">04 — Adhésion HelloAsso</div>
+        <h2>Adhérer en ligne</h2>
+        <div class="rule"></div>
+        <p>Les deux formules d'adhésion — paiement en 3 fois ou en une fois — sont directement intégrées au site via les formulaires HelloAsso, pour une adhésion simple et sécurisée, sans quitter forcetaxi69.com.</p>
+      </div>
+      <div class="section-shot">
+        <div class="frame"><img src="SHOT_ADHERER" alt="Adhésion" /></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="page">
+    <div class="topbar"><img src="LOGO_SRC" alt="" /><span class="name">FORCE TAXI 69</span><span class="page-label">Contact</span></div>
+    <div class="section-body">
+      <div class="section-text">
+        <div class="kicker">05 — Contact</div>
+        <h2>Rester joignable</h2>
+        <div class="rule"></div>
+        <p>Les chauffeurs peuvent contacter le syndicat directement depuis le site : par email, par téléphone, via WhatsApp ou sur TikTok.</p>
+      </div>
+      <div class="section-shot">
+        <div class="frame"><img src="SHOT_CONTACT" alt="Contact" /></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prochaines étapes -->
+  <section class="page final">
+    <div class="kicker">Prochaines étapes</div>
+    <h2>Pour validation du président</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <div class="txt">
+          <h3>Mise en ligne sur forcetaxi69.com</h3>
+          <p>Déploiement du site sur le domaine officiel du syndicat, dès validation du contenu et du visuel.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <div class="txt">
+          <h3>Adhésion en ligne déjà opérationnelle</h3>
+          <p>Les formulaires HelloAsso (paiement en 3 fois ou en une fois) sont déjà intégrés et prêts à recevoir les adhésions.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <div class="txt">
+          <h3>Retour et validation</h3>
+          <p>Dans l'attente des remarques du président avant mise en ligne définitive.</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-note">Force Taxi 69 — Syndicat de chauffeurs de taxi à Lyon, affilié FNDT — contact@forcetaxi69.com</div>
+  </section>
+
+</body>
+</html>

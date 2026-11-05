@@ -1,0 +1,48 @@
+<svg width="440" height="120" viewBox="0 0 440 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Force Taxi 69">
+  <defs>
+    <linearGradient id="emblem" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1b3b5f"/>
+      <stop offset="1" stop-color="#102538"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Emblème -->
+  <g>
+    <!-- Bouclier -->
+    <path d="M60 12
+             C60 12 82 20 94 22
+             C95 44 93 74 83 90
+             C75 102 66 107 60 110
+             C54 107 45 102 37 90
+             C27 74 25 44 26 22
+             C38 20 60 12 60 12 Z"
+          fill="url(#emblem)"/>
+    <!-- Liseré intérieur -->
+    <path d="M60 20
+             C60 20 80 27 88 29
+             C89 48 87 72 79 85
+             C72 96 65 100 60 103
+             C55 100 48 96 41 85
+             C33 72 31 48 32 29
+             C40 27 60 20 60 20 Z"
+          fill="none" stroke="#c9a227" stroke-width="1.4" opacity="0.85"/>
+
+    <!-- Barre de séparation FT / 69 -->
+    <line x1="37" y1="62" x2="83" y2="62" stroke="#c9a227" stroke-width="1.2" opacity="0.7"/>
+
+    <!-- FT en haut -->
+    <text x="60" y="55" font-family="Georgia, 'Times New Roman', serif" font-size="27" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="1">FT</text>
+
+    <!-- 69 en bas (chiffres alignés, même hauteur) -->
+    <text x="60" y="90" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="800" fill="#c9a227" text-anchor="middle" letter-spacing="1" style="font-variant-numeric: lining-nums tabular-nums">69</text>
+  </g>
+
+  <!-- Typographie -->
+  <text x="118" y="52" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="700" fill="#102538" letter-spacing="0.5">FORCE TAXI <tspan fill="#c9a227" font-family="Arial, Helvetica, sans-serif" font-weight="800" style="font-variant-numeric: lining-nums tabular-nums">69</tspan></text>
+
+  <!-- Filet de séparation -->
+  <line x1="119" y1="66" x2="408" y2="66" stroke="#d6dce2" stroke-width="1"/>
+
+  <!-- Baseline -->
+  <text x="120" y="86" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="500" fill="#5a6b7d" letter-spacing="4">SYNDICAT DE TAXIS · LYON · FNDT</text>
+</svg>

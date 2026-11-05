@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #102538;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  /* Identité Force Taxi 69 — reprise des couleurs du logo */
+  --color-navy-950: #0b1b2b;
+  --color-navy-900: #102538;
+  --color-navy-800: #1b3b5f;
+  --color-navy-700: #26527f;
+  --color-gold-600: #a9830f;
+  --color-gold-500: #c9a227;
+  --color-gold-400: #d9b84a;
+  --color-slate-600: #45545f;
+  --color-slate-500: #5a6b7d;
+  --color-slate-200: #d6dce2;
+  --color-slate-100: #eef1f4;
+  --color-slate-50: #f6f8fa;
+
+  --font-sans: var(--font-geist-sans);
+  --font-serif: var(--font-playfair);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
